@@ -1,34 +1,18 @@
-<html>
-    <head>
-        <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
-        <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-        <script scr="https://unpkg.com/babel-standalone@6/bable.min.js"></script>
-    </head>
-    <body>
-        <div id="root"></div>
-        <script type="text/babel">
-            class LikeButton extends React.Component{
-                constructor(props){
-                    super(props);
-                    this.state = {
-                        like: false,
-                    };
-
-                }
-
-                render(){
-                    return <button type="submit" onClick={() => {this.setState({Liked:true})}}>
-                        {this.state.liked === true ? 'Liked' : 'Like'}
-                        </button>;
-                    //return e('button', 
-                    //{onClick: () => {this.setState({Liked:true})}, type:'submit'} ,
-                     //this.state.liked === true ? 'Liked' : 'Like',
-                     //);
-                }
-            }
-        </script>
-        <script tyep="text/bable">
-            ReactDOM.render( <div><LikeButton /></div>, document.querySelector('#root'));
-        </script>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <title>React App</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
 </html>
