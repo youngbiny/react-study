@@ -13,9 +13,12 @@ class App extends Component {
   };
 
   handleIncrement = (habit) => {
-    const habits = [...this.state.habits];     
-    const index = habits.indexOf(habit);
-    habits[index].count++;
+    const habits = this.state.habits.map(itme => {
+      if(item.id === habit.id){
+        return {...habit, count : habit.count + 1};
+      }
+      return item;
+    });
     this.setState({habits : habits}); //왼쪽 key 오른쪽 value habit
   };
   handleDecrement = (habit) => {
