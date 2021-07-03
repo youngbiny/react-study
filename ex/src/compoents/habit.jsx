@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, setState } from 'react';
 
 
 class Habit extends Component {
@@ -6,13 +6,15 @@ class Habit extends Component {
         count : 0
     };
     handleIncrement = (event) => {
-        event.prevnetDefault();
-        const count = this.state.count + 1;
-    }
+        event.preventDefault();
+        this.setState({count : this.state.count + 1});
+    };
 
     handleDecrement = (event) => {
-        event.prevnetDefault();
-    }
+        event.preventDefault();
+        const count = this.state.count - 1;
+        this.setState({count : count ? 0 : count});
+    };
 
     render() {
         return (
