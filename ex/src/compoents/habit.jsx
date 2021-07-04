@@ -13,7 +13,12 @@ class Habit extends Component {
     handleDecrement = (event) => {
         event.preventDefault();
         const count = this.state.count - 1;
-        this.setState({count : count ? 0 : count});
+        this.setState({count : count < 0 ? 0 : count});
+    };
+
+    hadleDelete = (event) => {
+        event.preventDefault();
+
     };
 
     render() {
@@ -22,6 +27,7 @@ class Habit extends Component {
                 <span>{this.state.count}</span>
                 <button className="btn" onClick={this.handleIncrement}>증가</button>
                 <button className="btn" onClick={this.handleDecrement}>감소</button>
+                <button className="btn" onClick={this.hadleDelete}>삭제</button>
             </>
         );
     }
