@@ -2,33 +2,27 @@ import React, { Component, setState } from 'react';
 
 
 class Habit extends Component {
-    state = {
-        count : 0
-    };
-    handleIncrement = (event) => {
-        event.preventDefault();
-        this.setState({count : this.state.count + 1});
+    
+    handleIncrement = () => {
+
     };
 
-    handleDecrement = (event) => {
-        event.preventDefault();
-        const count = this.state.count - 1;
-        this.setState({count : count < 0 ? 0 : count});
+    handleDecrement = () => {
+
     };
 
-    hadleDelete = (event) => {
-        event.preventDefault();
+    hadleDelete = () => {
 
     };
 
     render() {
         return (
-            <>
-                <span>{this.state.count}</span>
+            <li>
+                <span>{this.props.count}</span>
                 <button className="btn" onClick={this.handleIncrement}>증가</button>
                 <button className="btn" onClick={this.handleDecrement}>감소</button>
                 <button className="btn" onClick={this.hadleDelete}>삭제</button>
-            </>
+            </li>
         );
     }
 }
