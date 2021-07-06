@@ -1,18 +1,20 @@
 import React, { Component, setState } from 'react';
-
-
+              
 class Habit extends Component {
     
-    handleIncrement = () => {
-
+    handleIncrement = (e) => {
+        e.preventDefault();
+        this.props.onIncrement();
     };
 
-    handleDecrement = () => {
-
+    handleDecrement = (e) => {
+        e.preventDefault();
+        this.props.onDecrement();
     };
 
-    hadleDelete = () => {
-
+    hadleDelete = (e) => {
+        e.preventDefault();
+        this.props.onDelete();
     };
 
     render() {
