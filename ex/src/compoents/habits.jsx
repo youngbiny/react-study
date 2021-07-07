@@ -3,24 +3,24 @@ import Habit from './habit';
 
 class Habits extends Component {
     state = {
-        habits = [
-            { id : 1, name : Reading, count:0 },
-            { id : 2, name : Reading, count:0 },
-            { id : 3, name : Reading, count:0 }
+        habits : [
+            { id : 1, name : 'Reading', count:0 },
+            { id : 2, name : 'Reading', count:0 },
+            { id : 3, name : 'Reading', count:0 }
         ],
     }
 
     handleIncrement = (habit) => {
-        console.log(habit);
-    }
+
+    };
 
     handleDecrement = (habit) => {
 
-    }
+    };
 
     handleDelete = (habit) => {
 
-    }
+    };
 
 
     render() {
@@ -29,6 +29,7 @@ class Habits extends Component {
                 {this.state.habits.map(habit => {
                     <Habit 
                         key = {habit.id}
+                        habit = {habit}
                         onIncrement = {this.handleIncrement}
                         onDecrement = {this.handleDecrement}
                         onDelete = {this.handleDelete}

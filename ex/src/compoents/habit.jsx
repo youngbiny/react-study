@@ -4,17 +4,17 @@ class Habit extends Component {
     
     handleIncrement = (e) => {
         e.preventDefault();
-        this.props.onIncrement();
+        this.props.onIncrement(this.props.habit);
     };
 
     handleDecrement = (e) => {
         e.preventDefault();
-        this.props.onDecrement();
+        this.props.onDecrement(this.props.habit);
     };
 
     hadleDelete = (e) => {
         e.preventDefault();
-        this.props.onDelete();
+        this.props.onDelete(this.props.habit);
     };
 
     render() {
