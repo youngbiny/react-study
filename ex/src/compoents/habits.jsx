@@ -17,7 +17,10 @@ class Habits extends Component {
     };
 
     handleDecrement = (habit) => {
-
+        const habit = [...this.state.habit];
+        const index = indexOf(habit);
+        const count = habit.count > 0 ? 0 : count;
+        this.setState({habits});
     };
 
     handleDelete = (habit) => {
