@@ -5,6 +5,7 @@ class Habit extends Component {
     handleIncrement = () => {
         //e.preventDefault();
         console(this.props.habit);
+
         // this.props.onIncrement(this.props.habit);
     };
 

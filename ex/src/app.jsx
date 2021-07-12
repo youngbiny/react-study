@@ -2,7 +2,7 @@ import './app.css';
 import React, { Component } from 'react';
 import Habits from './compoents/habits';
 
-class app extends Component {
+class App extends Component {
  state = {
     habits : [
         { id : 1, name : 'Reading', count:0 },
@@ -32,17 +32,14 @@ handleDelete = (habit) => {
     return (
       <>
         <Habits
-        key = {habit.id}
-        habit = {habit}
+        habits = {this.state.habits}
         onIncrement = {this.handleIncrement}
         onDecrement = {this.handleDecrement}
         onDelete = {this.handleDelete}
-         />
+         />;
       </>
     );
   }
 }
-
-export default app;
 
 export default App;

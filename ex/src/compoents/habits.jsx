@@ -2,30 +2,16 @@ import React, { Component } from 'react';
 import Habit from './habit';
 
 class Habits extends Component {
-    state = {
-        habits : [
-            { id : 1, name : 'Reading', count:0 },
-            { id : 2, name : 'Coding', count:0 },
-            { id : 3, name : 'Running', count:0 },
-        ],
-    };
-
     handleIncrement = (habit) => {
-        const habits = [...this.state.habits];
-        const index = this.state.indexOf(habits);
-        this.habits[index].setState({habits : habits});
+        this.props.onIncrement(habit);
     };
 
     handleDecrement = (habit) => {
-        const habits = [...this.state.habits];
-        const index =  this.state.indexOf(habits);
-        const count = habits.count < 0 ? 0 : habits.count - 1;
-        this.habits[index].setState({habits});
+        this.props.onInDecrement(habit);
     };
 
     handleDelete = (habit) => {
-        const habits = this.state.habits.filter(item => item.id =! habit.id);
-        this.habits.setState({habits});
+        this.props.onDelete(habit);
     };
 
 
