@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Habit from './habit';
+import HabitAddform from './habitAddform';
 
 class Habits extends Component {
     handleIncrement = (habit) => {
@@ -17,8 +18,10 @@ class Habits extends Component {
 
     render() {
         return (
+            <>
+            <HabitAddform />
             <ul>
-                {this.state.habits.map(habit => {
+                {this.props.habits.map(habit => {
                     <Habit 
                         key = {habit.id}
                         habit = {habit}
@@ -28,6 +31,7 @@ class Habits extends Component {
                     />
                 })}
             </ul>
+            </>
         );
     }
 }
