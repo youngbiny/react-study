@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class HabitAddform extends Component {
     inputRef = this.cereatRef();
-    onSubmit = () =>{
+    onSubmit = () => {
         
     }
 
