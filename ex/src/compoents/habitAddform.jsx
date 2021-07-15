@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class HabitAddform extends Component {
     inputRef = this.cereatRef();
     onSubmit = () => {
-        
+        console.log(this.inputRef());
     }
 
     render() {
