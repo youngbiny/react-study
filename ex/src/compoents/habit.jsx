@@ -3,22 +3,22 @@ import React, { Component, setState } from 'react';
 class Habit extends Component {
     
     handleIncrement = (habit) => {
-        //e.preventDefault();
+        e.preventDefault();
         console(this.props.habit);
         this.props.habit.onIncrement(this.props.habit);
-        // this.props.onIncrement(this.props.habit);
+        this.props.onIncrement(this.props.habit);
     };
 
     handleDecrement = (habit) => {
-        //e.preventDefault();
+        e.preventDefault();
         this.props.habit.onDecrement(this.props.habit);
-        // this.props.onDecrement(this.props.habit);
+        this.props.onDecrement(this.props.habit);
     };
 
     hadleDelete = (habit) => {
-        //e.preventDefault();
+        e.preventDefault();
         this.props.habit.onDelete(this.props.habit);
-        // this.props.onDelete(this.props.habit);
+        this.props.onDelete(this.props.habit);
     };
 
     render() {
