@@ -4,7 +4,7 @@ import HabitAddForm from './habitAddForm';
 
 class Habits extends Component {
  
-    handleIncrement = (habit) => {
+    handleIncrement = (habit) => {        
         this.props.onIncrement(habit);
     };
     handleDecrement = (habit) => {

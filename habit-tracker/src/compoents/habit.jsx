@@ -7,7 +7,7 @@ class Habit extends PureComponent {
     componentWillUnmount(){
         console.log('habit: ${this.props.habit.name} will unmount');
     }
-
+    
     handleIncrement = () => {
         this.props.onIncrement(this.props.habit);
     };

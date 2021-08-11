@@ -1,6 +1,7 @@
 import './app.css';
 import React, { Component } from 'react';
 import Habits from './compoents/habits';
+import HabitAddform from './compoents/habitAddform';
 
 class App extends Component {
  state = {
@@ -31,6 +32,7 @@ handleDelete = (habit) => {
   render() {
     return (
       <>
+        <HabitAddform />
         <Habits
         habits = {this.state.habits}
         onIncrement = {this.handleIncrement}
